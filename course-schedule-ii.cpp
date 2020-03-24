@@ -16,7 +16,7 @@ class Solution {
     if (!already_added[node]) {
         for (const auto& pre : prereq[node]) {
           if (!already_added[pre]) {
-            // deadlock by ciclic dependency
+            // deadlock by cyclic dependency
             if (bitmap[pre]) {
               return false;
             }
